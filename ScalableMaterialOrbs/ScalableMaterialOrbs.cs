@@ -1,14 +1,14 @@
 ﻿using HarmonyLib;
-using NeosModLoader;
+using ResoniteModLoader;
 using FrooxEngine;
 
 namespace ScalableMaterialOrbs
 {
-    public class ScalableMaterialOrbs : NeosMod
+    public class ScalableMaterialOrbs : ResoniteMod
     {
         public override string Name => "ScalableMaterialOrbs";
         public override string Author => "AlexW-578";
-        public override string Version => "1.0.0";
+        public override string Version => "1.0.1";
         public override string Link => "https://github.com/AlexW-578/ScalableMaterialOrbs/";
         private static ModConfiguration Config;
 	

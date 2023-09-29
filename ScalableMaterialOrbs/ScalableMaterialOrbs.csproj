@@ -31,27 +31,25 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(NeosPath)'==''">
-    <NeosPath>$(MSBuildThisFileDirectory)NeosVR/</NeosPath>
-    <NeosPath Condition="Exists('C:\Program Files (x86)\Steam\steamapps\common\NeosVR\')">C:\Program Files (x86)\Steam\steamapps\common\NeosVR\</NeosPath>
-    <NeosPath Condition="Exists('..\..\..\Desktop\Neos\app\')">..\..\..\Desktop\Neos\app\</NeosPath>
-    <NeosPath Condition="Exists('D:\Apps\Neos\app\')">D:\Apps\Neos\app\</NeosPath>
-    <NeosPath Condition="Exists('$(HOME)/.steam/steam/steamapps/common/NeosVR/')">$(HOME)/.steam/steam/steamapps/common/NeosVR/</NeosPath>
+  <PropertyGroup Condition="'$(GamePath)'==''">
+    <GamePath>$(MSBuildThisFileDirectory)Resonite/</GamePath>
+    <GamePath Condition="Exists('C:\Program Files (x86)\Steam\steamapps\common\Resonite\')">C:\Program Files (x86)\Steam\steamapps\common\Resonite\</GamePath>
+    <GamePath Condition="Exists('$(HOME)/.steam/steam/steamapps/common/Resonite/')">$(HOME)/.steam/steam/steamapps/common/Resonite/</GamePath>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="0Harmony">
-      <HintPath>$(NeosPath)\nml_libs\0Harmony.dll</HintPath>
+      <HintPath>$(GamePath)rml_libs\0Harmony.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="BaseX">
-      <HintPath>$(NeosPath)\Neos_Data\Managed\BaseX.dll</HintPath>
+    <Reference Include="Elements.Core">
+      <HintPath>$(GamePath)Resonite_Data\Managed\Elements.Core.dll</HintPath>
     </Reference>
     <Reference Include="FrooxEngine">
-      <HintPath>$(NeosPath)\Neos_Data\Managed\FrooxEngine.dll</HintPath>
+      <HintPath>$(GamePath)Resonite_Data\Managed\FrooxEngine.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="NeosModLoader">
-      <HintPath>$(NeosPath)\Libraries\NeosModLoader.dll</HintPath>
+    <Reference Include="ResoniteModLoader">
+      <HintPath>$(GamePath)Libraries\ResoniteModLoader.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
@@ -64,6 +62,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy "$(TargetDir)$(TargetFileName)" "$(NeosPath)nml_mods\"</PostBuildEvent>
+    <PostBuildEvent>copy "$(TargetDir)$(TargetFileName)" "$(GamePath)rml_mods\"</PostBuildEvent>
   </PropertyGroup>
 </Project>
