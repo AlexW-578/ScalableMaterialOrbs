@@ -39,18 +39,15 @@
   <ItemGroup>
     <Reference Include="0Harmony">
       <HintPath>$(GamePath)rml_libs\0Harmony.dll</HintPath>
-      <Private>False</Private>
     </Reference>
     <Reference Include="Elements.Core">
       <HintPath>$(GamePath)Resonite_Data\Managed\Elements.Core.dll</HintPath>
     </Reference>
     <Reference Include="FrooxEngine">
       <HintPath>$(GamePath)Resonite_Data\Managed\FrooxEngine.dll</HintPath>
-      <Private>False</Private>
     </Reference>
     <Reference Include="ResoniteModLoader">
       <HintPath>$(GamePath)Libraries\ResoniteModLoader.dll</HintPath>
-      <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
